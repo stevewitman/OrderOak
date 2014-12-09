@@ -1,5 +1,5 @@
 <br/><br/><br/>
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -10,21 +10,39 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <%= image_tag "image1.jpg" %>
+      <%= image_tag "the_kitchen_next_door.png" %>
       <div class="carousel-caption">
-        img 1
+        <h3>The Kitchen Next Door</h3>
+        <p>0.1 miles</p>
+        <div class="btn-group" role="group" aria-label="...">
+          <%= link_to "View Menu", root_path, class: "btn btn-lg btn-warning" %>
+          <%= link_to "Begin Order", root_path, class: "btn btn-lg btn-success" %>
+        </div>
+        <p>visit <%= link_to "www.thekitchen.com", "http://thekitchen.com" %></p>
       </div>
     </div>
     <div class="item">
-      <%= image_tag "image2.jpg" %>
+      <%= image_tag "tahona.png" %>
       <div class="carousel-caption">
-          Caption
+        <h3>Tahona Tequila Bistro</h3>
+        <p>0.1 miles</p>
+        <div class="btn-group" role="group" aria-label="...">
+          <%= link_to "View Menu", root_path, class: "btn btn-lg btn-warning" %>
+          <%= link_to "Begin Order", root_path, class: "btn btn-lg btn-success" %>
+        </div>
+        <p>visit <%= link_to "www.tahonaboulder.com", "http://www.tahonaboulder.com" %></p>
       </div>
     </div>
     <div class="item">
-      <%= image_tag "image3.jpg" %>
+      <%= image_tag "ozo.png" %>
       <div class="carousel-caption">
-          Caption
+        <h3>Ozo Coffee Co.</h3>
+        <p>0.2 miles</p>
+        <div class="btn-group" role="group" aria-label="...">
+          <%= link_to "View Menu", root_path, class: "btn btn-lg btn-warning" %>
+          <%= link_to "Begin Order", root_path, class: "btn btn-lg btn-success" %>
+        </div>
+        <p>visit <%= link_to "www.ozocoffee.com", "https://ozocoffee.com/" %></p>
       </div>
     </div>
   </div>
