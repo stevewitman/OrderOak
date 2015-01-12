@@ -1,0 +1,15 @@
+<% flash.each do |key, value| %>
+<p>
+  <%= value %>
+</p>
+<% end %>
+<h1>Store Details</h1>
+<h4><%= @store.name  %></h4>
+<p><%= "#{@store.address}" %></p>
+<p><%= "#{@store.city} #{@store.state} #{@store.zip}" %></p>
+<p><%= "#{@store.address}" %></p>
+<p><%= "#{@store.phone}" %></p>
+<p><%= link_to @store.website, "#{@store.website}" %></p>
+<br>
+<%= link_to "Back", stores_path %> |
+<%= link_to "Edit", edit_store_path(@store.id) %>
