@@ -1,0 +1,12 @@
+<% flash.each do |key, value| %>
+<p>
+  <%= value %>
+</p>
+<% end %>
+<h1><%= @store.name %> Menus</h1>
+<% @menus.each do |menu| %>
+<br>
+<h4><%= link_to menu.name, edit_store_menu_path(@store, menu) %></h4>
+<% end %>
+<br>
+<%= link_to "Create New Menu", new_store_menu_path %>

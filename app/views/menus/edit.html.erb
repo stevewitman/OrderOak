@@ -1,0 +1,20 @@
+<% flash.each do |key, value| %>
+<p>
+  <%= value %>
+</p>
+<% end %>
+<h1>Edit Menu</h1>
+<%= form_for [@store, @menu] do |f| %>
+<p>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %>
+</p>
+<p>
+  <%= f.submit "Update" %>
+</p>
+<p>
+  <%= link_to "Back", store_menus_path %> |
+  <%= link_to "Delete", store_menu_path(@store, @menu), :confirm => "Are you sure?", :method => :delete %>
+</p>
+
+<% end %>

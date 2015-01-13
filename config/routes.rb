@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   root "pages#index"
 
-  resources :stores
+  resources :stores do
+    resources :menus
+  end
   resources :orders
   resources :items
 
